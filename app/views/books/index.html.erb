@@ -9,6 +9,13 @@
     </div>
     <div class='col-md-8 offset-md-1'>
       <h2>Books</h2>
+
+      <!--ソートするためのリンクを作成する-->
+      <p>
+        <%= link_to '新しい順', books_path(latest: "ture") %>
+        |<%= link_to '評価の高い順', books_path(star_count: "true") %>
+      </p>
+      
       <%= render 'index', books: @books%>
     </div>
   </div>
